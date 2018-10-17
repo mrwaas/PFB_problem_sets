@@ -22,4 +22,3 @@ elif myQ8var == 0 :
 else:
    print('Negative')
 
-
