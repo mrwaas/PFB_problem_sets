@@ -1,0 +1,7 @@
+########################################
+#  pacbio-raw: /Users/admin/Python_GAW/canu/Darwin-amd64/bin/canu/pacbio.fastq
+#
+name   pacbio
+preset pacbio-raw
+/Users/admin/Python_GAW/canu/Darwin-amd64/bin/canu/pacbio.fastq
+
