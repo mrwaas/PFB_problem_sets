@@ -1,0 +1,18 @@
+#!/usr/env/bin python3
+
+sequence1 = 'agtctgtca'
+sequence2 = 'gatctctgc'
+
+match_score = 0
+
+# calculate the match score using +1 for match and -1 for mismatch
+
+for nt in range(len(seqence1)):
+    if sequence1[nt] == sequence2[nt]:
+        match_score += 1
+    else :
+        match_score += -1
+
+print(match_score)
+
+    
