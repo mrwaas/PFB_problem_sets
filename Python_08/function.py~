@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+
+def rev_comp(dna):
+    dna = dna.replace('A', 't')
+    dna = dna.replace('T', 'a')
+    dna = dna.replace('G', 'c')
+    dna = dna.replace('C', 'g')
+    dna = dna.upper()
+    dna = dna[::-1]
+    return dna
+    

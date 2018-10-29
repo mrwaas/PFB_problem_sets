@@ -11,20 +11,17 @@ file = ''
 
 try:
   file = sys.argv[1]
-except:
-  print('Please provide a file')
 
+  with open(file, 'r') as myFile:
 
-with open(file, 'r') as myFile:
-
-  for line in myFile:
-    if line.startswith('>'):
-      if len(sequence) > 0:
-        seq_dict[sequence_ID] = { 'sequence' : sequence , 'description' : sequence_desc }
-        sequence = ''
-      line = line.lstrip('>')
-      line = line.rstrip()
-      sequence_ID, sequence_desc = line.split(maxsplit = 1)
+    for line in myFile:
+      if line.startswith('>'):
+        if len(sequence) > 0:
+          seq_dict[sequence_ID] = { 'sequence' : sequence , 'description' : sequence_desc }
+          sequence = ''
+        line = line.lstrip('>')
+        line = line.rstrip()
+        sequence_ID, sequence_desc = line.split(maxsplit = 1)
 
     else:
       sequence += line.rstrip()
@@ -40,5 +37,7 @@ with open(file, 'r') as myFile:
         split_seq += seq_to_split[i:i+3] + ' '
       wFile.write(key+'-'+'frame 1 codons'+'\n'+split_seq+'\n')
 
+except:
+  print('Please provide a file')
   
   
